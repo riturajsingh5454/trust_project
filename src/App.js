@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Hero from "./Components/Hero";
+import Header from "./Components/Header";
+import Hero2 from "./Components/Hero2";
+import InstituteSection from "./Components/InstituteSection";
+import BlogSection from "./Components/BlogSection";
+import VideoSection from "./Components/VideoSection";
+import GoshalaSection from "./Components/GoshalaSection";
+import InfoSection from "./Components/InfoSection";
+import AshramSection from "./Components/AshramSection";
+import Footer from "./Components/Footer";
+import EventPopup from "./Components/Popup";
 
 function App() {
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Hero />
+      <Hero2 />
+      <InstituteSection />
+      <BlogSection />
+      <VideoSection />
+      <GoshalaSection />
+      <InfoSection />
+      <AshramSection />
+      <Footer />
+      <div className="bg-blue-500">
+        <EventPopup />
+      </div>
+    </>
   );
 }
 
